@@ -1,9 +1,7 @@
-package src;
-
+package Trivia;
 import java.util.Scanner;
-
 public class Trivia {
-		public static void main(String[] args) {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int opc,change;
 		char a='s';
@@ -70,10 +68,10 @@ public class Trivia {
 }
 
 
-			
-			
-			
-			
-
+		
+		
+		
+		
 
 }
+
