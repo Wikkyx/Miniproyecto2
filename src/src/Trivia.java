@@ -8,7 +8,6 @@ public class Trivia {
 		int opc;
 		char a='s';
 		String pregunta_config;
-		String posibles
 		
 		//Crear objetos de clases
 		
