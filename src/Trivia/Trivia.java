@@ -13,7 +13,7 @@ public class Trivia {
 		System.out.printf ("\n3.  Consulta de puntaje obtenido");
 		System.out.printf ("\n4.  Salir");
 		}
-	
+	     
 		
 
 
