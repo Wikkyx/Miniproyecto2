@@ -7,6 +7,8 @@ public class Trivia {
 		// TODO Auto-generated method stub
 		int opc;
 		char a='s';
+		String pregunta_config;
+		String posibles
 		
 		//Crear objetos de clases
 		
@@ -24,7 +26,8 @@ public class Trivia {
 			case 1:
 				System.out.printf ("\n      	Configuración     ");
 				System.out.printf ("\nIngrese la pregunta: ");
-				System.out.printf ("\nIngrese las posibles respuestas: ");
+				pregunta_config = sc.nextLine();
+				System.out.printf ("\nIngrese las posibles respuestas: "); 
 				System.out.printf ("\nIngrese la respuesta correcta: ");
 				System.out.printf ("\nIngrese el puntaje de la respuesta correcta: ");
 				break;
