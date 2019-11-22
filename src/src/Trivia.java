@@ -8,6 +8,7 @@ public class Trivia {
 		int opc;
 		char a='s';
 		String pregunta_config;
+		String preguntas_posibles[] = new String [4];
 		
 		//Crear objetos de clases
 		
@@ -27,6 +28,9 @@ public class Trivia {
 				System.out.printf ("\nIngrese la pregunta: ");
 				pregunta_config = sc.nextLine();
 				System.out.printf ("\nIngrese las posibles respuestas: "); 
+				for(int i=0;i<preguntas_posibles.length;i++) {
+					preguntas_posibles[i] = sc.nextLine();
+					}
 				System.out.printf ("\nIngrese la respuesta correcta: ");
 				System.out.printf ("\nIngrese el puntaje de la respuesta correcta: ");
 				break;
