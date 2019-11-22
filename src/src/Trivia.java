@@ -17,13 +17,17 @@ public class Trivia {
 		System.out.printf ("\n[1].  Configuracion");
 		System.out.printf ("\n[2].  Juego");
 		System.out.printf ("\n[3].  Consulta de puntaje obtenido");
-		System.out.printf ("\n[4].  Salir");
+		System.out.printf ("\n[4].  Salir\n");
 		
 		opc = sc.nextInt();
 		switch (opc) {
 			case 1:
-				
-		
+				System.out.printf ("\n      	Configuración     ");
+				System.out.printf ("\nIngrese la pregunta: ");
+				System.out.printf ("\nIngrese las posibles respuestas: ");
+				System.out.printf ("\nIngrese la respuesta correcta: ");
+				System.out.printf ("\nIngrese el puntaje de la respuesta correcta: ");
+				break;
 		}
 	     
 		
