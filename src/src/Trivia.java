@@ -34,6 +34,8 @@ public class Trivia {
 				System.out.printf ("\nIngrese la respuesta correcta: ");
 				System.out.printf ("\nIngrese el puntaje de la respuesta correcta: ");
 				break;
+			case 2:
+				System.out.printf ("\n      Hasta la proximaaaaaaaas	:v     ");
 		}
 	     
 		System.out.printf ("\n1. ¿Año en que se descubre America? "); 
