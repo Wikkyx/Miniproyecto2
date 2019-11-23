@@ -59,6 +59,8 @@ public class Trivia {
 			System.out.printf ("\n d)2016 "); 
 			System.out.printf ("\n Seleccione la respuesta correcta"); 
 			resp=sc.next();
+			System.out.printf ("\n Seleccione la respuesta correcta"); 
+
 		
 		
 		
