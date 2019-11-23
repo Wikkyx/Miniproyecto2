@@ -36,6 +36,10 @@ public class Trivia {
 				break;
 			case 2:
 				System.out.printf ("\n      Hasta la proximaaaaaaaas	:v     ");
+			case 3:
+				System.out.printf ("\n     Rip	:v     ");
+
+				
 		}
 	     
 		System.out.printf ("\n1. ¿Año en que se descubre America? "); 
@@ -66,7 +70,7 @@ public class Trivia {
 		
 		
 		
-		
+		//sdfasdfsdfsdaf
 		
 		
 		}
