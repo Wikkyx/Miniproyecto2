@@ -109,7 +109,7 @@ public class Trivia {
 		case 6:
 			System.out.printf ("\n ¿Cuantos distritos tiene la provincia? "); 
 			System.out.printf ("\n 78 "); 
-			System.out.printf ("\n58 "); 
+			System.out.printf ("\n 58 "); 
 			System.out.printf ("\n 68"); 
 			System.out.printf ("\n 48 "); 
 			System.out.printf ("\nSeleccione la respuesta correcta "); 
@@ -130,7 +130,7 @@ public class Trivia {
 			System.out.printf ("\n Rodrigo de Bastidas  "); 
 			System.out.printf ("\n  Diego de nicueza  "); 
 			System.out.printf ("\n Cristobal Colón  "); 
-			System.out.printf ("\nSeleccione la respuesta correcta "); 
+			System.out.printf ("\n Seleccione la respuesta correcta "); 
 			resp=sc.next();
 		
 		case 9:
@@ -139,26 +139,18 @@ public class Trivia {
 			System.out.printf("\n 1529");
 			System.out.printf("\n 1512");
 			System.out.printf("\n 1509");
-			System.out.printf ("\nSeleccione la respuesta correcta "); 
+			System.out.printf ("\n Seleccione la respuesta correcta "); 
 			resp=sc.next();
 		
 		case 10:
 			System.out.printf("\n10. ¿Fue el primer europeo en division el oceano Pacifico?");
 			System.out.printf("\n Cristobal Colón");
-			System.out.printf("\n Vazvo Nuñez de Balboa ");
+			System.out.printf("\n Vasco Núñez de Balboa ");
 			System.out.printf("\n Rodrigo de Bastidas");
-			System.out.printf("\nDiego de Nicueza");
-			System.out.printf ("\nSeleccione la respuesta correcta "); 
+			System.out.printf("\n Diego de Nicueza");
+			System.out.printf ("\n Seleccione la respuesta correcta "); 
 			resp=sc.next();
 		}
 	}
 }
-
-
-			
-			
-			
-			
-
-
 }
