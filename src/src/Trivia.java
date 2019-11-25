@@ -1,14 +1,10 @@
-package src;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Trivia {
-		public static String pregunta_config;
-		public static String respuest_correc;
-		public static String preguntas_posibles[] = new String [4];
-		
+	
 		public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int opc,change, opc_config;
@@ -16,7 +12,9 @@ public class Trivia {
 		String resp,cod;
 		char a='s';
 		char opc_config_a = 's';
-
+		String pregunta_config;
+		String respuest_correc;
+		String preguntas_posibles[] = new String [4];
 
 		
 		
@@ -69,11 +67,11 @@ public class Trivia {
 						
 						
 						System.out.print ("\nIngrese la pregunta: ");
-						Trivia.pregunta_config = sc.nextLine();
+						pregunta_config = sc.nextLine();
 						
 						System.out.print ("\nIngrese las posibles respuestas: \n"); 
 						ayuda = new ArrayList<String>();
-						for(int i=0;i<Trivia.preguntas_posibles.length;i++) {
+						for(int i=0;i<preguntas_posibles.length;i++) {
 							preguntas_posibles[i] = sc.nextLine();
 							String b = preguntas_posibles[i];
 							ayuda.add(b);
@@ -87,9 +85,9 @@ public class Trivia {
 						puntaje_correct = sc.nextInt();
 						sc.nextLine();
 						
-						coleccion_preg.add(Trivia.pregunta_config);
+						coleccion_preg.add(pregunta_config);
 						coleccion_posibles.add(ayuda);
-						coleccion_resp.add(Trivia.respuest_correc);
+						coleccion_resp.add(respuest_correc);
 						coleccion_punt.add(puntaje_correct);
 						
 						System.out.println("¿Desea añadir otra pregunta? s/n");
@@ -168,11 +166,11 @@ public class Trivia {
 				System.out.printf ("\n8.  El itsmo de Panamá fue visitado por primera vez por  "); 
 				System.out.printf ("\n9. ¿Año en que fue fundado la ciudad de Panamá?");
 				System.out.printf ("\n10. ¿Fue el primer europeo en division el oceano Pacifico?\n");
-				if (Trivia.pregunta_config != null) {
+				if (coleccion_preg != null) {
 					for (int i=0; i<coleccion_preg.size();i++) 
 					System.out.println("1"+(i+1)+".  "+coleccion_preg.get(i));
-					
-				}
+				}	
+
 				
 					change = sc.nextInt();
 			
@@ -271,21 +269,23 @@ public class Trivia {
 					resp=sc.next();
 					}
 					
-				else if (change == 11 & coleccion_preg.get(0)!= null) {
+				else if (change == 11 & coleccion_preg != null) {
 					System.out.println("Si hay pregunta 11");
 				}
 				
-				else if (change == 12 & coleccion_preg.get(1) != null) {
-					System.out.println("Si hay pregunta 11");
+				else if (change == 12 & coleccion_preg != null) {
+					System.out.println("Si hay pregunta 12");
 
 				}
+				
 					
 				else {
 					System.out.println("Numero incorrecto.");
 					break;
 					}
 				}
-			}
+			
 	
 		}
 	}
+}
