@@ -1,4 +1,4 @@
-
+package src;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -27,6 +27,7 @@ public class Trivia {
 		ArrayList<ArrayList<String> > coleccion_posibles =  
                 new ArrayList<ArrayList<String> >(); 
         ArrayList<String> ayuda = new ArrayList<String>(); 
+        String [] letras = {"a","b","c","d"}; 
 
 
 		
@@ -36,9 +37,7 @@ public class Trivia {
 		
 		//Segundo menu
         
-        System.out.printf ("\n1. Jugar");
-		System.out.printf ("\n2. Salir");
-		
+    
         
 		while(a=='s') {
 		System.out.printf ("\n      	Juego de Trivia      ");
@@ -166,7 +165,7 @@ public class Trivia {
 				System.out.printf ("\n8.  El itsmo de Panamá fue visitado por primera vez por  "); 
 				System.out.printf ("\n9. ¿Año en que fue fundado la ciudad de Panamá?");
 				System.out.printf ("\n10. ¿Fue el primer europeo en division el oceano Pacifico?\n");
-				if (coleccion_preg != null) {
+				if (!coleccion_preg.isEmpty()) {
 					for (int i=0; i<coleccion_preg.size();i++) 
 					System.out.println("1"+(i+1)+".  "+coleccion_preg.get(i));
 				}	
@@ -269,13 +268,40 @@ public class Trivia {
 					resp=sc.next();
 					}
 					
-				else if (change == 11 & coleccion_preg != null) {
-					System.out.println("Si hay pregunta 11");
+				else if (change == 11 & coleccion_preg.size()>=1) {
+					System.out.println(coleccion_preg.get(0));
+					for (int i=0; i<4; i++) {
+						System.out.println(letras[i]+") "+coleccion_posibles.get(0).get(i));
+					}
+					
 				}
 				
-				else if (change == 12 & coleccion_preg != null) {
-					System.out.println("Si hay pregunta 12");
-
+				else if (change == 12 & coleccion_preg.size()>=2) {
+					System.out.println(coleccion_preg.get(1));
+					for (int i=0; i<4; i++) {
+						System.out.println(letras[i]+") "+coleccion_posibles.get(1).get(i));
+					}
+				}
+				
+				else if (change == 13 & coleccion_preg.size()>=3) {
+					System.out.println(coleccion_preg.get(2));
+					for (int i=0; i<4; i++) {
+						System.out.println(letras[i]+") "+coleccion_posibles.get(2).get(i));
+					}
+				}
+				
+				else if (change == 14 & coleccion_preg.size()>=4) {
+					System.out.println(coleccion_preg.get(3));
+					for (int i=0; i<4; i++) {
+						System.out.println(letras[i]+") "+coleccion_posibles.get(3).get(i));
+					}
+				}
+				
+				else if (change == 15 & coleccion_preg.size()>=5) {
+					System.out.println(coleccion_preg.get(4));
+					for (int i=0; i<4; i++) {
+						System.out.println(letras[i]+") "+coleccion_posibles.get(4).get(i));
+					}
 				}
 				
 					
