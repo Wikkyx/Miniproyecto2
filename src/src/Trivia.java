@@ -4,16 +4,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-
-
-
-
-//Falta crear métodos y que no se repita la misma pregunta.
-
-
-
-
-
 public class Trivia {
 		char rp, correc;
 		int anad;
@@ -51,7 +41,7 @@ public class Trivia {
 		String respuest_correc;
 		String preguntas_posibles[] = new String [4];
 		int añadir = 5;
-
+		
 		
 		int entrada=0;
 		String nombre;	
@@ -73,18 +63,9 @@ public class Trivia {
 		ArrayList<Integer> repetir = new ArrayList<Integer>();	
 
 		Trivia tri = new Trivia();
-
-
-
-		
-		//Falta pedirle el nombre al usuario
-		//Bienvenido
-		//Jugar o salir
-		
-		//Segundo menu
         
 		
-	
+
 		System.out.println("\n1. Jugar");
 		System.out.println("\n2. Salir");
 		entrada = sc.nextInt();
@@ -95,7 +76,7 @@ public class Trivia {
 			sc.nextLine();
 			System.out.println("Ingrese su nombre");
 			nombre = sc.nextLine();
-			System.out.println("Bienvienido " + nombre);
+			System.out.println("Bienvenido " + nombre);
 			
 			a = 's';
 			while(a=='s') {
@@ -117,8 +98,9 @@ public class Trivia {
 	
 					opc_config = sc.nextInt();
 					sc.nextLine();
+					opc_config_a= 's';
+
 					switch (opc_config) {
-					
 					case 1:
 						
 						while (opc_config_a == 's') {
@@ -393,10 +375,11 @@ public class Trivia {
 						else if (change >10 & change<=coleccion_preg.size()+10 & coleccion_preg.size()>=1)
 						{
 							for (int i = 0; i<coleccion_preg.size();i++) {
-								if (change ==11+i) {
+								if (change ==11+i & !repetir.contains(11+i)) {
 									System.out.println(coleccion_preg.get(i));
+									repetir.add(11+i);
 									for (int j = 0; j<4; j++) {
-										System.out.println(coleccion_posibles.get(i).get(j));
+										System.out.println(letras[j] +")"+coleccion_posibles.get(i).get(j));
 									}
 									
 									System.out.print ("\nSeleccione la respuesta correcta: \n"); 
@@ -405,10 +388,12 @@ public class Trivia {
 									char corrc = b.charAt(0);
 									tri.Fijar_valor(resp, corrc, coleccion_punt.get(i));
 									puntaj += tri.RespuestaCyN();
+									
 									System.out.print(" \n¿Desea seguir jugando? s/n");
 								    pregunta_game=sc.next().charAt(0);
 									
 								}
+							
 							}
 						}
 						
@@ -446,6 +431,7 @@ public class Trivia {
 					}
 					
 					else if (salir == 'v') {
+						System.out.println("Gracias por usar el programa.");
 						System.exit(0);
 					}
 					else {
@@ -458,6 +444,7 @@ public class Trivia {
 		}
 		}
 		else if (entrada == 2) {
+			System.out.println("Gracias por usar el programa.");
 			System.exit(0);
 		}
 		
