@@ -7,7 +7,7 @@ public class Trivia {
 	
 		public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int opc,change, opc_config;
+		int opc,change, opc_config, inicio;
 		int puntaje_correct=0;
 		String resp,cod;
 		char a='s';
@@ -15,7 +15,9 @@ public class Trivia {
 		String pregunta_config;
 		String respuest_correc;
 		String preguntas_posibles[] = new String [4];
-
+		boolean correcto;
+		int puntaje_partida;
+		String nombre;
 		
 		
 		//Crear objetos de clases
@@ -31,15 +33,23 @@ public class Trivia {
 
 
 		
-		//Falta pedirle el nombre al usuario
-		//Bienvenido
-		//Jugar o salir
-		
+		//Pedirle el nombre al usuario
+        System.out.println("Ingrese su nombre:");
+        nombre=sc.next();
+        System.out.println("\nBIENVENIDO");
+        System.out.println("\nUsuario: " + nombre);
+        System.out.println("¿Qué desea hacer?");
+        System.out.println("[1] Jugar");
+        System.out.println("[2] Salir");
+		inicio=sc.nextInt();
+		if(inicio==1)
+		{
 		//Segundo menu
-        
-    
-        
+  
 		while(a=='s') {
+		
+		
+		
 		System.out.printf ("\n      	Juego de Trivia      ");
 		System.out.printf ("\n[1].  Configuracion");
 		System.out.printf ("\n[2].  Juego");
@@ -155,6 +165,7 @@ public class Trivia {
 				//Pregunta correcta o incorrecta
 				//Desea seguir jugando
 			case 2:
+				
 				System.out.printf ("\n1. ¿Año en que se descubre America? "); 
 				System.out.printf ("\n2. ¿Cual es la cabecera de la provincia de Coclé? "); 
 				System.out.printf ("\n3. ¿Cual es raiz cuadrada de 3600? "); 
@@ -182,6 +193,13 @@ public class Trivia {
 					System.out.print ("\n d)2016 "); 
 					System.out.print ("\n Seleccione la respuesta correcta: \n"); 
 					resp=sc.next();
+					if (resp==coleccion_resp.get(change))
+							{
+								System.out.print ("\n ¡Respuesta correcta! \n"); 
+								System.out.print ("\n Has ganado "+ coleccion_punt.get(change) +  " puntos \n"); 
+
+							}
+					
 					}
 				else if (change ==2) { 
 					
@@ -309,8 +327,12 @@ public class Trivia {
 					System.out.println("Numero incorrecto.");
 					break;
 					}
-				}
-			
+			case 3:
+				
+			case 4:
+				System.out.println("Top Puntajes Obtenidos");	
+		}
+		}	
 	
 		}
 	}
