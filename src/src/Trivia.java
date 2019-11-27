@@ -3,12 +3,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+//Programa hecho por Feng William, Gamero Jonathan, Saénz Rafael
 
 public class Trivia {
 		char rp, correc;
 		int anad;
 		public static char z = 's';
 		
+		//Métodos que no trabajan con arraylist
 		public void Fijar_valor(char resp, char corrc, int añadir)
 		{
 			rp = resp;
@@ -30,9 +32,10 @@ public class Trivia {
 		}
 		
 		
-	
+		//Programa principal
 		public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		//variables del programa principal	
 		int opc,change, opc_config,puntaj=0;
 		int puntaje_correct=0;
 		char a='s';
@@ -41,8 +44,7 @@ public class Trivia {
 		String respuest_correc;
 		String preguntas_posibles[] = new String [4];
 		int añadir = 5;
-		
-		
+        String [] letras = {"a","b","c","d"}; 
 		int entrada=0;
 		String nombre;	
 			
@@ -57,7 +59,6 @@ public class Trivia {
 		ArrayList<ArrayList<String> > coleccion_posibles =  
                 new ArrayList<ArrayList<String> >(); 
         ArrayList<String> ayuda = new ArrayList<String>(); 
-        String [] letras = {"a","b","c","d"}; 
 		ArrayList<String> usuarios = new ArrayList<String>();	
 		ArrayList<Integer> record = new ArrayList<Integer>();
 		ArrayList<Integer> repetir = new ArrayList<Integer>();	
@@ -65,7 +66,7 @@ public class Trivia {
 		Trivia tri = new Trivia();
         
 		
-
+		//Primer menu
 		System.out.println("\n1. Jugar");
 		System.out.println("\n2. Salir");
 		entrada = sc.nextInt();
@@ -78,6 +79,7 @@ public class Trivia {
 			nombre = sc.nextLine();
 			System.out.println("Bienvenido " + nombre);
 			
+			//Segundo menu
 			a = 's';
 			while(a=='s') {
 			System.out.printf ("\n      	Juego de Trivia      ");
@@ -99,7 +101,8 @@ public class Trivia {
 					opc_config = sc.nextInt();
 					sc.nextLine();
 					opc_config_a= 's';
-
+					
+					//Menu de la configuracion
 					switch (opc_config) {
 					case 1:
 						
@@ -154,6 +157,7 @@ public class Trivia {
 	
 		
 						break;
+					//Eliminar preguntas
 					case 2:
 						char e = 's';
 						while (e =='s') {
@@ -170,6 +174,9 @@ public class Trivia {
 										delete = delete - 1;
 										sc.nextLine();
 										coleccion_preg.remove(delete);
+										coleccion_posibles.remove(delete);
+										coleccion_resp.remove(delete);
+										coleccion_punt.remove(delete);
 									}
 									else {
 											break;
@@ -190,10 +197,6 @@ public class Trivia {
 					}
 					break;
 				//Juego
-				//No se debe permitir al usario elegir las mismas preguntas
-				//Área de mensajes:
-					//Pregunta correcta o incorrecta
-					//Desea seguir jugando
 				case 2:
 					puntaj = 0;
 					pregunta_game = 's';
@@ -208,6 +211,8 @@ public class Trivia {
 						System.out.printf ("\n8.  El itsmo de Panamá fue visitado por primera vez por  "); 
 						System.out.printf ("\n9. ¿Año en que fue fundado la ciudad de Panamá?");
 						System.out.printf ("\n10. ¿Fue el primer europeo en division el oceano Pacifico?\n");
+						
+						//Evalua si exite algun elemento del arreglo
 						if (coleccion_preg != null) {
 							for (int i=0; i<coleccion_preg.size();i++) 
 							System.out.println("1"+(i+1)+".  "+coleccion_preg.get(i));
@@ -372,6 +377,7 @@ public class Trivia {
 							System.out.print(" \n¿Desea seguir jugando? s/n");
 						    pregunta_game=sc.next().charAt(0);
 							}
+						//Aqui se trabajan los arraylist
 						else if (change >10 & change<=coleccion_preg.size()+10 & coleccion_preg.size()>=1)
 						{
 							for (int i = 0; i<coleccion_preg.size();i++) {
@@ -406,10 +412,12 @@ public class Trivia {
 					}
 					
 					System.out.println("Su puntaje fue de " + puntaj);
+					//Añade los elementos al arreglo repetir para que no repitan las preguntas
 					record.add(puntaj);
 					usuarios.add(nombre);
 					repetir.clear();
 					break;
+				//Record de los juegos
 				case 3:
 					if (usuarios.size()>0) {
 						System.out.println("Usuarios" + "    "+ "Record");
@@ -422,6 +430,7 @@ public class Trivia {
 					}
 					break;
 				}
+				//Menu para salir
 				if (opc == 4) {
 					System.out.println("¿Quieres salir a trivia o salir definitivamente? t/v ");
 					char salir = sc.next().charAt(0);
